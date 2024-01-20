@@ -30,19 +30,13 @@ or via BibTeX code:
 The Google Pretrained Word Vectors are available in a binary file. Since it is very large, we do not include a copy here. You can obtain it as follows:
 
 1. Go to Google's [word2vec archive page](https://code.google.com/archive/p/word2vec/), search for "`GoogleNews-vectors-negative300.bin.gz`" to find its download [link](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
-2. Download it and and unzip locally. You will have a file `GoogleNews-vectors-negative300.bin`. (Note the .gz file is more than 1GB, and when extracted, the .bin file will be more than 3GB.)
+2. Download it and and unzip locally into your working directory. You will have a file `GoogleNews-vectors-negative300.bin`. (Note the .gz file is more than 1GB, and when extracted, the .bin file will be more than 3GB.)
 
 One could use the [rword2vec](https://github.com/mukul13/rword2vec) package to load these pretrained vectors. However, that repository appears to be inactive. Here's my fix based on Windows.
 
-1. Download the .c function from `rword2vec` and save it in the working directory
-
-URL: https://github.com/mukul13/rword2vec/blob/master/src/distance.c 
-
-2. Compile it in RStudio
-
-See https://stackoverflow.com/questions/15992767/create-a-dll-dynamic-library-from-c-in-r-windows
-
-3. Call it from R
+1. Download [distance.c](https://github.com/mukul13/rword2vec/blob/master/src/distance.c) from the `rword2vec` repository and save it in your working directory.
+2. Compile it in RStudio. See https://stackoverflow.com/questions/15992767/create-a-dll-dynamic-library-from-c-in-r-windows
+3. Call it from R. E.g., 
 
 ```
 dyn.load("distance.dll")
