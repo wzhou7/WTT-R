@@ -23,9 +23,7 @@ or via BibTeX code:
 ```
 
 
-# Special Notes
-
-## Using Google Pretrained Word Vectors in R
+# Using Google Pretrained Word Vectors in R
 
 The Google Pretrained Word Vectors are available in a binary file. Since it is very large, we do not include a copy here. You can obtain it as follows:
 
