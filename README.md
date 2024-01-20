@@ -25,6 +25,7 @@ or via BibTeX code:
 
 # Using Google Pretrained Word Vectors in R
 
+While loading Google's pretrained word vectors is quite easy in Python, doing so in R isn't as easy 
 The Google Pretrained Word Vectors are available in a binary file. Since it is very large, we do not include a copy here. You can obtain it as follows:
 
 1. Go to Google's [word2vec archive page](https://code.google.com/archive/p/word2vec/), search for "`GoogleNews-vectors-negative300.bin.gz`" to find its download [link](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
