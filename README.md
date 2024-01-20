@@ -2,6 +2,25 @@
 
 This repositoty implements the collocated topic modeling method in R. This method is described in Jung, Zhou, & Smith (2024) with an illustrative study. There is also a Python implementation available at the [WTTP](https://github.com/wzhou7/WTTP) repository.
 
+# How to Use
+
+To use this package, you will need the `devtools` library to install it from github. 
+For example, 
+
+```
+install.packages("devtools") # install devtools
+library(devtools) # load devtools
+install_github("wzhou7/WTTR") # install WTTR
+```
+
+The above code needs to be run just once.
+Then, you can load the `WTTR` package each time of use:
+
+```
+library(WTTR) # load WTTR
+```
+
+Then, you can use the implemented functions to explore your data. See example study.
 
 # Citation
 
