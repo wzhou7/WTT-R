@@ -35,8 +35,8 @@ To obtain Google Pretrained Word Vectors:
 To load the vectors, here's my quick fix based on Windows.
 
 1. Download [distance.c](https://github.com/mukul13/rword2vec/blob/master/src/distance.c) from the `rword2vec` repository and save it in your working directory.
-2. Compile it in RStudio. See https://stackoverflow.com/questions/15992767/create-a-dll-dynamic-library-from-c-in-r-windows
-3. Call it from R. E.g., 
+2. Compile the C program file into a DLL dynamic library. This step is platform dependent. After ensuring you have R and Rtools installed, in Windows command line, navigate into the working directory, and then run “R CMD SHLIB distance.c”. This step will generate several files in the same directory. One of them is `"distance.dll"`.
+3. In R scripts, you can use the `".C"` function after calling `dyn.load("distance.dll")`. E.g.,
 
 ```
 dyn.load("distance.dll")
@@ -48,7 +48,7 @@ OUT <- .C("distance",
    rfile_name=as.character(file_name),
    search_word=as.character(search_word),
    rN=as.integer(num),
-   rbestw=as.character(rep("123",num)),
+   rbestw=as.character(rep("",num)),
    rbestd=as.double(rep(0,num)))
 
 data=as.data.frame(cbind(OUT$rbestw,OUT$rbestd))
