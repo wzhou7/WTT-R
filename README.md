@@ -23,13 +23,17 @@ or via BibTeX code:
 ```
 
 
-# Using Google Pretrained Word Vectors in R
+# Special Notes
 
-The Google Pretrained Word Vectors are available in a binary file. It can be downloaded here and unzip locally.
+## Using Google Pretrained Word Vectors in R
 
-GoogleNews-vectors-negative300.bin
+The Google Pretrained Word Vectors are available in a binary file. Since it is very large, we do not include a copy here. You can obtain it as follows:
 
-To load these vectors, there was an R package called rword2vec to use. It is now unmaintained.
+1. Go to Google's [word2vec archive page](https://code.google.com/archive/p/word2vec/), search for "GoogleNews-vectors-negative300.bin.gz" to find its download [link](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
+2. Download it and and unzip locally. You will have a file `GoogleNews-vectors-negative300.bin`. Note the .gz file is more than 1GB, and when extracted, the .bin file will be more than 3GB.
+
+We can use the R package called `[rword2vec](https://github.com/mukul13/rword2vec)` to load these pretrained vectors. 
+
 After searching around, here's my fix based on Windows.
 
 1. Download the .c function from `rword2vec` and save it in the working directory
